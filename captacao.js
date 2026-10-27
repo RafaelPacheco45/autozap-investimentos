@@ -55,7 +55,7 @@
     if(order.pix) { $('pixKey').value=order.pix.key; $('pixRecipient').textContent=order.pix.recipient; }
     $('receiptUpload').disabled=order.state!=='PAYMENT_PENDING'; $('receiptSend').disabled=order.state!=='PAYMENT_PENDING';
     $('paymentState').textContent=states[order.state]; $('memberAccess').hidden=order.state!=='CONFIRMED';
-    $('memberLink').href='socios.html#access='+token;
+    $('memberLink').href='https://socio.autozap.log.br/#access='+token;
     $('paymentProceed').hidden=!['PAYMENT_PENDING','PAYMENT_REPORTED','CONFIRMED'].includes(order.state);
     $('previewNote').hidden=true; $('documentTitle').textContent='Seu documento. Sua participação.';
   }
